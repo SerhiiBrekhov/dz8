@@ -44,8 +44,8 @@ gallery.on('error.simplelightbox', function (e) {
 });
    
 
-const instance = basicLightbox.create(`
-<img src = ${imageLink} width="800" height="600">
-`);
+// const instance = basicLightbox.create(`
+// <img src = ${imageLink} width="800" height="600">
+// `);
 instance.show();
 }
