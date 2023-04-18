@@ -23,8 +23,11 @@ console.log(keys);
 for (key in dataStorage) {
   feedbackForm[key].value = dataStorage[key];
   feedbackForm[key].textContent = feedbackForm[key].value
-  console.log(feedbackForm[key].name, feedbackForm[key].value)
-    }
+  console.log(dataStorage[key])
+  // console.log(feedbackForm[key].name)
+  console.log(feedbackForm[key].value)
+  console.log(feedbackForm[key].textContent)
+}
     }
 
 function formLocalStorage(event) {
