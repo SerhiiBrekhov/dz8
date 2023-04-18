@@ -9,7 +9,7 @@ function importToFormStorage() {
     console.log(dataStorage);
     if (dataStorage) {
         for (key in dataStorage) {
-            feedbackForm[key].value = dataStorage[key];
+//             feedbackForm[key].value = dataStorage[key];
             feedbackForm[key].textContent = feedbackForm[key].value
             console.log(feedbackForm[key].name, feedbackForm[key].value)
         }
