@@ -1,8 +1,10 @@
 const feedbackForm = document.querySelector(".feedback-form");
+
+importToFormStorage();
+
 feedbackForm.addEventListener('submit', validDateTest);
 feedbackForm.addEventListener('input',  _.throttle(formLocalStorage,300));
 
-importToFormStorage();
 
 function importToFormStorage() {
     const dataStorage = JSON.parse(localStorage.getItem("feedback-form-state"));
