@@ -6,7 +6,7 @@ importToFormStorage();
 importToFormStorage();
 
 feedbackForm.addEventListener('submit', validDateTest);
-feedbackForm.addEventListener('input',  _.throttle(formLocalStorage,300));
+feedbackForm.addEventListener('input',  _.throttle(formLocalStorage,500));
 
 function importToFormStorage() {
     const dataStorage = JSON.parse(localStorage.getItem("feedback-form-state"));
@@ -14,7 +14,13 @@ function importToFormStorage() {
     if (!dataStorage) {
         return
 };
-      for (key in dataStorage) {
+
+//test na object:
+
+const keys = Object.keys(dataStorage);
+console.log(keys);
+     
+for (key in dataStorage) {
   feedbackForm[key].value = dataStorage[key];
   feedbackForm[key].textContent = feedbackForm[key].value
   console.log(feedbackForm[key].name, feedbackForm[key].value)
