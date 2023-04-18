@@ -3,8 +3,6 @@ const feedbackForm = document.querySelector(".feedback-form");
 importToFormStorage();
 
 
-importToFormStorage();
-
 feedbackForm.addEventListener('submit', validDateTest);
 feedbackForm.addEventListener('input',  _.throttle(formLocalStorage,500));
 
@@ -20,7 +18,7 @@ function importToFormStorage() {
 const keys = Object.keys(dataStorage);
 console.log(keys);
      
-for (key in dataStorage) {
+for (const key in dataStorage) {
   feedbackForm[key].value = dataStorage[key];
   feedbackForm[key].textContent = feedbackForm[key].value
   console.log(dataStorage[key])
