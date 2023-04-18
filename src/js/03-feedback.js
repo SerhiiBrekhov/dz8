@@ -9,7 +9,7 @@ feedbackForm.addEventListener('submit', validDateTest);
 feedbackForm.addEventListener('input',  _.throttle(formLocalStorage,500));
 
 function importToFormStorage() {
-    const dataStorage = localStorage.getItem("feedback-form-state");
+    const dataStorage = JSON.parse(localStorage.getItem("feedback-form-state"));
     console.log(dataStorage);
     if (!dataStorage) {
         return
